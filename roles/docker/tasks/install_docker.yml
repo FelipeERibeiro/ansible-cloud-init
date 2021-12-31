@@ -22,7 +22,7 @@
  - name: Desabilitando o firewall
    ansible.builtin.systemd:
      name: firewall
-     state: stoped
+     state: stopped
      enabled: no
  - name: Criando o docker-compose
    get_url:
