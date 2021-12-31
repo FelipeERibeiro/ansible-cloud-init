@@ -1,5 +1,8 @@
 ---
  - hosts: localhost
    become: true
+   vars:
+     docker_external_mount_point: false
+
    roles:
      - docker
