@@ -1,4 +1,9 @@
 ---
+ - name: Desabilitando o firewall
+   ansible.builtin.systemd:
+     name: firewalld
+     state: stopped
+     enabled: no
  - name: Adicionando o repositorio Oficial Docker
    get_url:
      url: https://download.docker.com/linux/centos/docker-ce.repo
@@ -19,11 +24,6 @@
      name: docker
      state: started
      enabled: yes
- - name: Desabilitando o firewall
-   ansible.builtin.systemd:
-     name: firewall
-     state: stopped
-     enabled: no
  - name: Criando o docker-compose
    get_url:
      url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
