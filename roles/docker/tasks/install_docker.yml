@@ -34,10 +34,5 @@
      name:
        - docker
  - name: Create nginx container
-   docker_container:
-     name: nginx
-     image: nginx:latest
-     state: started
-     recreate: yes
-     published_ports:
-       - "80:80"
+   ansible.builtin.shell: docker-compose -f ./docker-compose/docker-compose.yml up -d
+     
