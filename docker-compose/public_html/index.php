@@ -32,8 +32,8 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 </ul>
 <li> Layout de disco e partições</li>
 <ul>
-<li> Entender sobre consumo de disco</li>
-<p>Extra: Pesquisar sobre inodes.</p>
+<li> Entender sobre consumo de disco</li><ul>
+<li>Extra: Pesquisar sobre inodes.</li></ul>
 <li> Identificar um ponto de montagem e entender como que isto fica dentro de uma estrutura de diretórios;  </li>
 <li> Entender o processo de criação/formatação de um novo disco;                                            </li>
 <li> Entender alocação de espaço raiz x alocação de espaço unidade montada;                                 </li>
