@@ -1,7 +1,7 @@
+
 <!DOCTYPE html>
 <title>
-Server <?php print exec('cat /run/hostname_server | awk -F \- \'{print $2}\' '); ?>
-</title>
+Server free01</title>
 <style>
 html { color-scheme: dark; }
 body { width: 60em; margin: 0 auto;
@@ -11,7 +11,7 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 <body>
 <p>Este ambiente possui um HA baseado em servidores rodando em nginx com um LB.</p>
 <p>Este &eacute; o servidor:  </p>
-<li><?php print exec('cat /run/hostname_server'); ?></li>
+<li>srv-free01-felipe95</li>
 <h3>Estudos Linux</h3>
 <details>
   <summary>Semana 01</summary>
@@ -114,6 +114,68 @@ Meu primeiro webserver, deu boa
 </textarea>
 </details>
 </details>
-
-
+<details>
+<summary>Semana 03</summary>
+<ol>
+<li>Firewall linux básico</li>
+<ul>
+<li>Compreenda a função do Iptables nas tabelas input e output</li>
+<li>Entender função do forward</li>
+<li>Analisar comando iptables, e analisar exemplos de bloqueios baseado em:
+<ul>
+<li>Origem</li>
+<li>Destino</li>
+<li>Porta</li>
+<li>Protocolo</li>
+</ul>
+</li>
+<li>Extra: Pesquisar sobre tabelas iptables (filter, nat e mangle)</li>
+</ul>
+<li>Firewall Oracle Cloud</li>
+<ul>
+<li>Compreender liberação em Security List.</li>
+<li>Extra: Entender diferença de Security List e Network Security Group, e quando usar cada um dos casos.</li>
+</ul>
+<li>Selinux</li>
+<ul>
+<li>Entender os diferentes estados de Selinux</li>
+<li>Compreender como mudar a estado de Selinux</li>
+</ul>
+<li>Comunicação</li>
+<ul>
+<li>Entender como validar comunicação em uma porta TCP</li>
+<li>Validar como verificar se uma porta UDP está ativa</li>
+<li>Saber a diferença de TCP e UDP</li>
+<li>Conhecer portas padrões de:
+<ul>
+<li>DNS</li>
+<li>Email (SMTP/POP e Imap)</li>
+<li>HTTP</li>
+<li>HTTPS</li>
+</ul>
+</li>
+<li>Compreender diferenças entre portas altas e portas baixas.</li>
+<li>Encontrar no linux o local aonde existe a lista de portas conhecidas.</li>
+</ul>
+<li>Conf de Linux</li>
+<ul>
+<li>Saber validar e alterar o DNS do linux</li>
+<li>Saber como testar a resolução de nomes</li>
+<li>Alterar hostname</li>
+<li>Saber ordem de resolução de nome no linux</li>
+</ul>
+</ol>
+<details>
+<summary>DESAFIO 03</summary>
+<p><input type="checkbox"> Alterar o selinux para disabled</p>
+<p><input type="checkbox"> Criar regra de INPUT que bloqueie a entrada da porta 81, de comunicação vinda do seu IP (acesse em seu computador o ip.me para validar)</p>
+<p><input type="checkbox"> Crie uma regra de bloqueio para o OUTPUT com destino o endereço do DNS do seu servidor, na porta do DNS;</p>
+<li> Extra: Deixe esta regra ativa ao iniciar o servidor.</li>
+<p><input type="checkbox"> Libere no Oracle Cloud a porta 81 para qualquer origem.</p>
+<p><input type="checkbox"> Altere a porta do apache da 80 para a 81.</p>
+<p><input type="checkbox"> Alterar o DNS do seu servidor para o 8.8.8.8 e valide a resolução de nomes.</p>
+<p><input type="checkbox"> Teste o acesso do seu site através do próprio servidor para web-server.</p>
+<p><input type="checkbox"> Faça o próprio servidor resolver o nome web-server para o seu ip local internamente.</p>
+</details>
+</details>
 </body>
